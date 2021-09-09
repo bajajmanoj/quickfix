@@ -1,5 +1,10 @@
 cmake_minimum_required(VERSION 3.0 FATAL_ERROR)
 
+option(BUILD_EXAMPLES "Build examples" ON)
+if(NOT WIN32)
+    option(BUILD_SHARED_LIBS "Build shared libraries" ON)
+endif()
+
 option(HAVE_EMX "Build with EMX")
 
 if(HAVE_EMX)
@@ -98,7 +103,9 @@ add_subdirectory(UnitTest++)
 endif()
 
 add_subdirectory(src)
+if(BUILD_EXAMPLES)
 add_subdirectory(examples)
+endif()
 if( WIN32)
 add_subdirectory(test)
 endif()
