@@ -22862,18 +22862,18 @@ class SSLSocketAcceptorBase(Acceptor):
     def setPassword(self, pwd):
         return _quickfix.SSLSocketAcceptorBase_setPassword(self, pwd)
 
-    def passwordHandleCallback(self, buf, bufsize, verify, job):
-        return _quickfix.SSLSocketAcceptorBase_passwordHandleCallback(self, buf, bufsize, verify, job)
+    def passwordHandleCallback(self, buf, bufsize, verify):
+        return _quickfix.SSLSocketAcceptorBase_passwordHandleCallback(self, buf, bufsize, verify)
 
     @staticmethod
-    def passPhraseHandleCB(buf, bufsize, verify, job):
-        return _quickfix.SSLSocketAcceptorBase_passPhraseHandleCB(buf, bufsize, verify, job)
+    def passPhraseHandleCB(buf, bufsize, verify, instance):
+        return _quickfix.SSLSocketAcceptorBase_passPhraseHandleCB(buf, bufsize, verify, instance)
 
 # Register SSLSocketAcceptorBase in _quickfix:
 _quickfix.SSLSocketAcceptorBase_swigregister(SSLSocketAcceptorBase)
 
-def SSLSocketAcceptorBase_passPhraseHandleCB(buf, bufsize, verify, job):
-    return _quickfix.SSLSocketAcceptorBase_passPhraseHandleCB(buf, bufsize, verify, job)
+def SSLSocketAcceptorBase_passPhraseHandleCB(buf, bufsize, verify, instance):
+    return _quickfix.SSLSocketAcceptorBase_passPhraseHandleCB(buf, bufsize, verify, instance)
 
 class SSLSocketInitiatorBase(Initiator):
     thisown = property(lambda x: x.this.own(), lambda x, v: x.this.own(v), doc="The membership flag")
@@ -22889,18 +22889,18 @@ class SSLSocketInitiatorBase(Initiator):
     def setCertAndKey(self, cert, key):
         return _quickfix.SSLSocketInitiatorBase_setCertAndKey(self, cert, key)
 
-    def passwordHandleCallback(self, buf, bufsize, verify, job):
-        return _quickfix.SSLSocketInitiatorBase_passwordHandleCallback(self, buf, bufsize, verify, job)
+    def passwordHandleCallback(self, buf, bufsize, verify):
+        return _quickfix.SSLSocketInitiatorBase_passwordHandleCallback(self, buf, bufsize, verify)
 
     @staticmethod
-    def passwordHandleCB(buf, bufsize, verify, job):
-        return _quickfix.SSLSocketInitiatorBase_passwordHandleCB(buf, bufsize, verify, job)
+    def passwordHandleCB(buf, bufsize, verify, instance):
+        return _quickfix.SSLSocketInitiatorBase_passwordHandleCB(buf, bufsize, verify, instance)
 
 # Register SSLSocketInitiatorBase in _quickfix:
 _quickfix.SSLSocketInitiatorBase_swigregister(SSLSocketInitiatorBase)
 
-def SSLSocketInitiatorBase_passwordHandleCB(buf, bufsize, verify, job):
-    return _quickfix.SSLSocketInitiatorBase_passwordHandleCB(buf, bufsize, verify, job)
+def SSLSocketInitiatorBase_passwordHandleCB(buf, bufsize, verify, instance):
+    return _quickfix.SSLSocketInitiatorBase_passwordHandleCB(buf, bufsize, verify, instance)
 
 class SSLSocketConnection(object):
     thisown = property(lambda x: x.this.own(), lambda x, v: x.this.own(v), doc="The membership flag")
