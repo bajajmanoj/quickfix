@@ -1,15 +1,20 @@
-if (WIN32)
+if(WIN32)
 
-add_executable(atrun
- main.cpp Process.cpp ./test/ProcessTestCase.cpp ${PROJECT_SOURCE_DIR}/src/getopt.c)
- 
-target_include_directories(atrun PRIVATE ${PROJECT_SOURCE_DIR}/UnitTest++/src ${PROJECT_SOURCE_DIR}/src)
+  add_executable(atrun main.cpp Process.cpp ./test/ProcessTestCase.cpp
+                       ${PROJECT_SOURCE_DIR}/src/getopt.c)
 
-target_link_libraries(atrun UnitTest++)
+  target_include_directories(atrun PRIVATE ${PROJECT_SOURCE_DIR}/UnitTest++/src
+                                           ${PROJECT_SOURCE_DIR}/src)
 
-set_target_properties(atrun PROPERTIES
-                      RUNTIME_OUTPUT_DIRECTORY_DEBUG ${PROJECT_SOURCE_DIR}/test/debug/at/
-                      RUNTIME_OUTPUT_DIRECTORY_RELEASE ${PROJECT_SOURCE_DIR}/test/release/at/
-                      RUNTIME_OUTPUT_DIRECTORY_RELWITHDEBINFO ${PROJECT_SOURCE_DIR}/test/release/at/)
+  target_link_libraries(atrun UnitTest++)
+
+  set_target_properties(
+    atrun
+    PROPERTIES RUNTIME_OUTPUT_DIRECTORY_DEBUG
+               ${PROJECT_SOURCE_DIR}/test/debug/at/
+               RUNTIME_OUTPUT_DIRECTORY_RELEASE
+               ${PROJECT_SOURCE_DIR}/test/release/at/
+               RUNTIME_OUTPUT_DIRECTORY_RELWITHDEBINFO
+               ${PROJECT_SOURCE_DIR}/test/release/at/)
 
 endif()
