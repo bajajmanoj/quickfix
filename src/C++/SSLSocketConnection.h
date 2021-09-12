@@ -117,7 +117,7 @@
 #ifndef FIX_SSLSOCKETCONNECTION_H
 #define FIX_SSLSOCKETCONNECTION_H
 
-#if (HAVE_SSL > 0)
+#ifdef HAVE_SSL
 
 #ifdef _MSC_VER
 #pragma warning( disable : 4503 4355 4786 4290 )

@@ -52,8 +52,12 @@
 #include <Session.h>
 #include <Log.h>
 #include <FileLog.h>
+#include <MySQLLog.h>
+#include <MySQLConnection.h>
+#include <DatabaseConnectionID.h>
 #include <MessageStore.h>
 #include <FileStore.h>
+#include <MySQLStore.h>
 #include <Application.h>
 #include <Initiator.h>
 #include <SocketInitiator.h>
@@ -84,8 +88,10 @@ typedef FIX::TimeRange TimeRange;
 typedef FIX::Responder Responder;
 typedef FIX::Log Log;
 typedef FIX::LogFactory LogFactory;
+typedef FIX::MySQLLogFactory MySQLLogFactory;
 typedef FIX::MessageStore MessageStore;
 typedef FIX::MessageStoreFactory MessageStoreFactory;
+typedef FIX::MySQLStoreFactory MySQLStoreFactory;
 typedef FIX::Mutex Mutex;
 typedef FIX::DOMDocumentPtr DOMDocumentPtr;
 typedef FIX::SessionSettings SessionSettings;
@@ -206,8 +212,12 @@ typedef FIX::SessionSettings SessionSettings;
 %include "../C++/Session.h"
 %include "../C++/Log.h"
 %include "../C++/FileLog.h"
+%include "../C++/DatabaseConnectionID.h"
+%include "../C++/MySQLConnection.h"
+%include "../C++/MySQLLog.h"
 %include "../C++/MessageStore.h"
 %include "../C++/FileStore.h"
+%include "../C++/MySQLStore.h"
 %include "../C++/Application.h"
 %include "../C++/Initiator.h"
 %include "../C++/SocketInitiator.h"

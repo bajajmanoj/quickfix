@@ -116,7 +116,7 @@
 #ifndef FIX_THREADEDSSLSOCKETACCEPTOR_H
 #define FIX_THREADEDSSLSOCKETACCEPTOR_H
 
-#if (HAVE_SSL > 0)
+#ifdef HAVE_SSL
 
 #ifdef _MSC_VER
 #pragma warning(disable : 4503 4355 4786 4290)

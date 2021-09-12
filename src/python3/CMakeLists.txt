@@ -22,6 +22,18 @@ if(HAVE_SSL)
                         ${OPENSSL_LIBRARIES})
 endif()
 
+if(HAVE_MYSQL)
+  set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -DHAVE_MYSQL=1")
+  target_link_libraries(${quickfix_python_lib_name} ${PROJECT_NAME}
+                        ${MYSQL_CLIENT_LIBS})
+endif()
+
+if(HAVE_POSTGRESQL)
+  set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -HAVE_POSTGRESQL=1")
+  target_link_libraries(${quickfix_python_lib_name} ${PROJECT_NAME}
+                        ${PostgreSQL_LIBRARIES})
+endif()
+
 set_target_properties(
   ${quickfix_python_lib_name}
   PROPERTIES VERSION ${quickfix_python_VERSION}

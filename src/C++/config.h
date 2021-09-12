@@ -7,6 +7,8 @@
 /* #undef HAVE_SHARED_PTR_IN_TR1_NAMESPACE */
 /* #undef HAVE_STD_TR1_SHARED_PTR_FROM_TR1_MEMORY_HEADER */
 #define HAVE_STD_UNIQUE_PTR
-#define HAVE_SSL 1
+#define HAVE_SSL
+#define HAVE_MYSQL 
+/* #undef HAVE_POSTGRES */
 
 #endif

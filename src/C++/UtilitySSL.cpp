@@ -115,7 +115,7 @@
 #include "config.h"
 #endif
 
-#if (HAVE_SSL > 0)
+#ifdef HAVE_SSL
 
 #include <vector>
 

@@ -66,3 +66,5 @@ core
 \#*#
 *.log
 *.trs
+src/python/QuickfixPython.cpp
+src/python/QuickfixPython.h

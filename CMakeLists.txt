@@ -39,8 +39,8 @@ option(HAVE_PYTHON "Build with default Python version" ON)
 option(HAVE_PYTHON2 "Build with default Python2 version" OFF)
 option(HAVE_PYTHON3 "Build with default Python3 version" OFF)
 
-option(BUILD_EXAMPLES "Build examples" ON)
-option(BUILD_TESTS "Build tests" ON)
+option(BUILD_EXAMPLES "Build examples" OFF)
+option(BUILD_TESTS "Build tests" OFF)
 
 # Make sure that a previous config.h has not undefined HAVE_SSL
 if(HAVE_SSL)

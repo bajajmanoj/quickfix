@@ -112,7 +112,7 @@
 #ifndef FIX_UTILITY_SSL_H
 #define FIX_UTILITY_SSL_H
 
-#if (HAVE_SSL > 0)
+#ifdef HAVE_SSL
 
 #include "Log.h"
 #include "SessionSettings.h"
